@@ -1,7 +1,7 @@
-FROM fedora
+FROM centos
 MAINTAINER Guillaume Scheibel <guillaume.scheibel@gmail.com>
 
-RUN yum install -y tar make gcc ruby ruby-devel rubygems graphviz rubygem-nokogiri asciidoctor unzip findutils which wget python-devel zlib-devel
+RUN yum install -y tar make gcc ruby ruby-devel rubygems graphviz rubygem-nokogiri asciidoctor unzip findutils which wget python-devel zlib-devel patch
 RUN (curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.tar.gz | tar xfz -)
 ENV JAVA_HOME /jdk1.8.0_20
 ENV PATH $PATH:$JAVA_HOME/bin:/fopub/bin
