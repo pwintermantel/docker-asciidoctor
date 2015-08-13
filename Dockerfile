@@ -12,7 +12,7 @@ RUN mkdir /fopub && curl -L https://api.github.com/repos/asciidoctor/asciidoctor
 
 RUN gem install --no-ri --no-rdoc asciidoctor-diagram && \
     gem install --no-ri --no-rdoc asciidoctor-epub3 --version 1.0.0.alpha.2 && \
-    gem install --no-ri --no-rdoc asciidoctor-pdf --version 1.5.0.alpha.7 && \
+    gem install --no-ri --no-rdoc --pre asciidoctor-pdf && \
     gem install --no-ri --no-rdoc asciidoctor-confluence && \
     gem install --no-ri --no-rdoc coderay pygments.rb thread_safe epubcheck kindlegen && \
     gem install --no-ri --no-rdoc slim && \
